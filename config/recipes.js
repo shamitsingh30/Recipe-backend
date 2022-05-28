@@ -5,7 +5,7 @@ const data = require('../assets/recipes.json');
 const Recipe = require('../models/recipe');
 const db = require('../config/mongoose');
 
-Recipe.remove({ });
+Recipe.deleteMany({ });
 
 Recipe.insertMany(data, function(err, r){
     if(err){
